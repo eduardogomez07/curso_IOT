@@ -1,0 +1,17 @@
+// Primer ejemplo - Enciende Led 
+//Función setup(CONFIGURAR): Sirve para inicializar o configurar puertos de entrada y salida
+//INPUT: entrada
+//OUTPUT: salida
+
+void setup() {
+  pinMode(13, OUTPUT);  //Configuro el pin 13 como salida
+}
+
+//Función loop (EJECUTAR): Se ejecutan las instrucciones dentro del ciclo de manera indefinidamente o repetitivamente
+
+void loop() {
+  digitalWrite(13, HIGH);   // Inicializo o seteo el pin 13 en HIGH:1 - Prendo el led
+  delay(1000);                       // delay o retardo por 1 segundo, 1000ms=1s
+  digitalWrite(13, LOW);    // Seteo el pin 13 en LOW:0 - Apago el led
+  delay(1000);                       // retardo
+}
