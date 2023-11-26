@@ -1,0 +1,15 @@
+void setup() {
+  pinMode(led, OUTPUT);
+  pinMode(pulsador, INPUT);
+}
+
+void loop() {
+  estado = digitalRead(pulsador);  // comprobar el estado del pulsador y lo almaceno en una variable
+  if (pulsador == HIGH)
+  {
+    digitalWrite(led, HIGH); //enciendo el led
+  } else {
+    // apago el led
+    digitalWrite(led, LOW);
+  }
+}
