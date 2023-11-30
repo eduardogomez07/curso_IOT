@@ -1,15 +1,29 @@
+//Enciende led con pulsador
+
+//configuración
 void setup() {
-  pinMode(led, OUTPUT);
-  pinMode(pulsador, INPUT);
+  pinMode(5, OUTPUT); //conecto un led con salida al pin 5
+  pinMode(7, INPUT);  //conector un pulsador a la entrada 7
 }
 
+//ejecución
 void loop() {
-  estado = digitalRead(pulsador);  // comprobar el estado del pulsador y lo almaceno en una variable
-  if (pulsador == HIGH)
+  /*if (condition) {
+    proceso1;   //Asi sería la estructura del ciclo if
+    }else {
+    proceso2;
+    }
+  */
+  
+  int estado;
+  estado=digitalRead(7);   //chequeo el estado del pulsador y lo almaceno el una variable
+  if (estado == LOW)
   {
-    digitalWrite(led, HIGH); //enciendo el led
-  } else {
-    // apago el led
-    digitalWrite(led, LOW);
+    digitalWrite(5, HIGH);
   }
+  else {
+    digitalWrite(5, LOW);
+  }
+
+
 }
