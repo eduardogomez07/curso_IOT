@@ -1,0 +1,25 @@
+//ADC: COnversión analógica digital
+
+int pote = A0;    
+int led = D9;     
+int valor = 0; 
+
+void setup() {
+  // declare the ledPin as an OUTPUT:
+  Serial.begin(115200);
+  pinMode(led, OUTPUT);
+
+}
+
+void loop() {
+  valor = analogRead(pote);
+
+  Serial.println(valor);
+  if (valor > 500)
+  {
+    digitalWrite(D9, 0);
+  } else {
+    digitalWrite(D9, 1);
+  }
+
+}
