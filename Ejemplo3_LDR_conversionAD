@@ -5,7 +5,6 @@ int led = D9;
 int valor = 0; 
 
 void setup() {
-  // declare the ledPin as an OUTPUT:
   Serial.begin(115200);
   pinMode(led, OUTPUT);
 
